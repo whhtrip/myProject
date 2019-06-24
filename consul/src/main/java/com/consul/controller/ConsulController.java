@@ -31,7 +31,7 @@ public class ConsulController {
     @RequestMapping("getConsul")
     public Object getConsul(){
         System.out.println("开始获取consul服务");
-        ConsulClient consul = new ConsulClient("10.100.242.2");
+        ConsulClient consul = new ConsulClient();
        Set<Map.Entry<String,Service>> cs= consul.getAgentServices().getValue().entrySet();
        Iterator<Map.Entry<String,Service>> iterable = cs.iterator();
        while(iterable.hasNext()){
@@ -48,7 +48,6 @@ public class ConsulController {
 
     @RequestMapping("get")
     public String get(){
-
         return "asfdsf";
 }
 }
