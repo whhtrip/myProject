@@ -1,0 +1,12 @@
+<Language name="language">
+    <properties name="java">
+        <descript>
+            this is java language
+        </descript>
+    </properties>
+    <properties name = "python">
+        <descript>
+            this is python language
+        </descript>
+    </properties>
+</Language>
