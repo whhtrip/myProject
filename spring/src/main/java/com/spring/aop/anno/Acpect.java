@@ -6,14 +6,19 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-//@Aspect
-//@Component
+/**
+ * 声明切面
+ */
+@Aspect
+@Component
 public class Acpect {
-//    @Pointcut("execution(public * com.spring.aop.anno.point..*.*(..))")
-    public void pointCut(){}
-
-  //  @Before("pointCut()")
-    public void doBefore(JoinPoint joinPoint){
+    //定义切点
+    @Pointcut("execution(public * com.spring.aop.anno..*.*(..))")
+    public void pointCut() {
+    }
+    //前置增强
+    @Before("pointCut()")
+    public void doBefore(JoinPoint joinPoint) {
         System.out.println("我是前面的");
     }
 }

@@ -4,4 +4,11 @@
     <insert id="insert" parameterType="com.ssm.domain.User">
         insert into whh values (#{name})
     </insert>
+    <select id="selectAll" resultType="com.ssm.domain.User">
+        select name from whh
+    </select>
+
+    <select id="selectByPage" resultType="com.ssm.domain.User">
+        select name from whh
+    </select>
 </mapper>
