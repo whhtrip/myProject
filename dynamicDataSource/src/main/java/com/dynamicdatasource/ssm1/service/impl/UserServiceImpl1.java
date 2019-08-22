@@ -1,6 +1,5 @@
 package com.dynamicdatasource.ssm1.service.impl;
 
-import com.dynamicdatasource.mybatisConfig.DataSource;
 import com.dynamicdatasource.ssm1.domain.User1;
 
 import com.dynamicdatasource.ssm1.mapper.UserMapper;
@@ -14,23 +13,23 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-@Service
+//@Service
 //@Transactional(transactionManager = "dataSourceTransactionManager")
 public class UserServiceImpl1 implements UserService1 {
     Logger logger = LoggerFactory.getLogger(UserService1.class);
 
-    @Autowired
+   // @Autowired
     UserMapper userMapper1;
 
     @Override
-    @DataSource(value = "dataSource1")
+    //@DataSource(value = "dataSource1")
     public List<User1> selectAll() {
         logger.info("UserMapper1=" + userMapper1);
         return userMapper1.selectAll();
     }
 
     @Override
-    @DataSource(value = "dataSource2")
+    //@DataSource(value = "dataSource2")
     public int addUser(User1 user) {
         logger.info("UserMapper1=" + userMapper1);
         logger.info("User=" + user);

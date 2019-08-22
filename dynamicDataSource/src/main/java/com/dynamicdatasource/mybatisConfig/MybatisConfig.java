@@ -36,13 +36,13 @@ public class MybatisConfig {
         logger.info("开始创建数据源工厂");
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(myRoutingDataSource);//classpath:com/fairyland/jdp/**/*Mapper.xml
-        org.springframework.core.io.Resource[] resources = new PathMatchingResourcePatternResolver().getResources("classpath:com/mapper/*Mapper.xml");
-        logger.info("加载资源："+resources);
+        //org.springframework.core.io.Resource[] resources = new PathMatchingResourcePatternResolver().getResources("classpath:com/mapper/*Mapper.xml");
+       /* logger.info("加载资源："+resources);
         logger.info("资源的长度："+resources.length);
         for (int i = 0; i <resources.length ; i++) {
             logger.info("资源{}是"+resources[i],i);
         }
-        sqlSessionFactoryBean.setMapperLocations(resources);
+        sqlSessionFactoryBean.setMapperLocations(resources);*/
         //SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBean.getObject();
         logger.info("创建工厂" + sqlSessionFactoryBean);
         logger.info("工厂中使用的数据源是："+myRoutingDataSource);

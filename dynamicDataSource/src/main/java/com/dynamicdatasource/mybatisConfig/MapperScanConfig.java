@@ -1,3 +1,4 @@
+/*
 package com.dynamicdatasource.mybatisConfig;
 
 import org.apache.log4j.Logger;
@@ -12,8 +13,9 @@ public class MapperScanConfig {
 //        return mapperScannerConfigurer;
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         //mapperScannerConfigurer.setAnnotationClass(com.fairyland.jdp.orm.mybatis.pagination.annotation.MyBatisRepository.class);
-        mapperScannerConfigurer.setBasePackage("com.dynamicdatasource.ssm1.mapper");
+        mapperScannerConfigurer.setBasePackage("com.whh.dao");
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory1");
         return mapperScannerConfigurer;
     }
 }
+*/
